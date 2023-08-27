@@ -9,14 +9,16 @@ namespace PLAYERTWO.PlatformerProject
 		public string retriesFormat = "00";
 		public string coinsFormat = "000";
 		public string healthFormat = "0";
-		public string applesFormat = "0";
+        public string applesFormat = "0";
+		public string totalApplesFormat = "/3";
 
-		[Header("UI Elements")]
+        [Header("UI Elements")]
 		public Text retries;
 		public Text coins;
 		public Text health;
 		public Text timer;
 		public Text apples;
+		public Text totalApples;
 		public Image[] starsImages;
 
 		protected Game m_game;
@@ -26,6 +28,8 @@ namespace PLAYERTWO.PlatformerProject
 		protected float timerStep;
 		protected static float timerRefreshRate = .1f;
 
+	
+
 		/// <summary>
 		/// Set the coin counter to a given value.
 		/// </summary>
@@ -34,10 +38,19 @@ namespace PLAYERTWO.PlatformerProject
 			coins.text = value.ToString(coinsFormat);
 		}
 
+		//Sets apple counter and displays text green if all apples are collected
 		protected virtual void UpdateApples(int value)
 		{
 			apples.text = value.ToString(applesFormat);
-		}
+
+			Debug.Log("Test");
+			if(m_score.apples == m_score.totalApplesInLevel)
+            {
+				Debug.Log("HUD TEST");
+                apples.color = Color.green;
+				totalApples.color = Color.green;
+            }
+        }
 
 		/// <summary>
 		/// Set the retries counter to a given value.

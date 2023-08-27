@@ -23,5 +23,16 @@ namespace PLAYERTWO.PlatformerProject
 		public virtual void ConsolidateScore() => m_score.Consolidate();
 
 		public virtual void Pause(bool value) => m_pauser.Pause(value);
+
+		//checks each type of fruit if all of them have been collected
+		public void FruitCheck()
+		{
+
+			if (m_score.m_apples == m_score.totalApplesInLevel)
+			{
+				m_score.applesCollected = true;
+				Debug.Log(m_score.applesCollected);
+			}
+		}
 	}
 }

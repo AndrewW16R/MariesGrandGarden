@@ -23,10 +23,19 @@ namespace PLAYERTWO.PlatformerProject
 		/// </summary>
 		public UnityEvent OnScoreLoaded;
 
-		/// <summary>
-		/// Returns the amount of collected coins on the current Level.
-		/// </summary>
-		public int coins
+        /// <summary>
+        /// Returns the amount of collected coins on the current Level.
+        /// </summary>
+        /// 
+
+		//Bool returns if all apples are collected
+		// int is how many total apples there are in the level.
+
+        public bool applesCollected = false;
+		public int totalApplesInLevel;
+
+		
+        public int coins
 		{
 			get { return m_coins; }
 
@@ -36,7 +45,7 @@ namespace PLAYERTWO.PlatformerProject
 				OnCoinsSet?.Invoke(m_coins);
 			}
 		}
-
+		//Returns amount of apples collected
 		public int apples
 		{
 			get { return m_apples; }
@@ -66,7 +75,7 @@ namespace PLAYERTWO.PlatformerProject
 		protected int m_coins;
 		protected bool[] m_stars = new bool[GameLevel.StarsPerLevel];
 
-		protected int m_apples;
+		public int m_apples;
 
 		protected Game m_game;
 		protected GameLevel m_level;
@@ -132,6 +141,11 @@ namespace PLAYERTWO.PlatformerProject
 
 		protected virtual void Update()
 		{
+			if (applesCollected == true)
+			{ 
+				//Debug.Log("All apples collected");
+			}
+
 			if (!stopTime)
 			{
 				time += Time.deltaTime;

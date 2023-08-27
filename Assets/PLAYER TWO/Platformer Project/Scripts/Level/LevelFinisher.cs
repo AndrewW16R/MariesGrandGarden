@@ -29,6 +29,7 @@ namespace PLAYERTWO.PlatformerProject
 		protected GameLoader m_loader => GameLoader.instance;
 		protected Fader m_fader => Fader.instance;
 
+
 		protected virtual IEnumerator FinishRoutine()
 		{
 			m_pauser.Pause(false);
@@ -59,6 +60,8 @@ namespace PLAYERTWO.PlatformerProject
 			m_loader.Load(exitScene);
 			OnExit?.Invoke();
 		}
+
+		
 
 		/// <summary>
 		/// Invokes the Level finishing routine to consolidate the score and load the next scene.
