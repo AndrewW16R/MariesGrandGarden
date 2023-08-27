@@ -11,6 +11,8 @@ namespace PLAYERTWO.PlatformerProject
 		/// </summary>
 		public UnityEvent<int> OnCoinsSet;
 
+		public UnityEvent<int> OnApplesSet;
+
 		/// <summary>
 		/// Called when the collected stars array have changed.
 		/// </summary>
@@ -35,6 +37,17 @@ namespace PLAYERTWO.PlatformerProject
 			}
 		}
 
+		public int apples
+		{
+			get { return m_apples; }
+
+			set
+			{
+				m_apples = value;
+				OnApplesSet?.Invoke(m_apples);
+			}
+		}
+
 		/// <summary>
 		/// Returns the array of stars on the current Level.
 		/// </summary>
@@ -52,6 +65,8 @@ namespace PLAYERTWO.PlatformerProject
 
 		protected int m_coins;
 		protected bool[] m_stars = new bool[GameLevel.StarsPerLevel];
+
+		protected int m_apples;
 
 		protected Game m_game;
 		protected GameLevel m_level;

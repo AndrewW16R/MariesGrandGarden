@@ -9,12 +9,14 @@ namespace PLAYERTWO.PlatformerProject
 		public string retriesFormat = "00";
 		public string coinsFormat = "000";
 		public string healthFormat = "0";
+		public string applesFormat = "0";
 
 		[Header("UI Elements")]
 		public Text retries;
 		public Text coins;
 		public Text health;
 		public Text timer;
+		public Text apples;
 		public Image[] starsImages;
 
 		protected Game m_game;
@@ -30,6 +32,11 @@ namespace PLAYERTWO.PlatformerProject
 		protected virtual void UpdateCoins(int value)
 		{
 			coins.text = value.ToString(coinsFormat);
+		}
+
+		protected virtual void UpdateApples(int value)
+		{
+			apples.text = value.ToString(applesFormat);
 		}
 
 		/// <summary>
@@ -82,10 +89,11 @@ namespace PLAYERTWO.PlatformerProject
 			UpdateCoins(m_score.coins);
 			UpdateRetries(m_game.retries);
 			UpdateHealth();
-			UpdateStars(m_score.stars);
-		}
+            UpdateStars(m_score.stars);
+			UpdateApples(m_score.apples);
+        }
 
-		protected virtual void Awake()
+        protected virtual void Awake()
 		{
 			m_game = Game.instance;
 			m_score = LevelScore.instance;
@@ -97,6 +105,7 @@ namespace PLAYERTWO.PlatformerProject
 				m_score.OnStarsSet.AddListener(UpdateStars);
 				m_game.OnRetriesSet.AddListener(UpdateRetries);
 				m_player.health.onChange.AddListener(UpdateHealth);
+				m_score.OnApplesSet.AddListener(UpdateApples);
 				Refresh();
 			});
 		}

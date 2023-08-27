@@ -18,6 +18,8 @@ namespace PLAYERTWO.PlatformerProject
 
 		public virtual void AddCoins(int amount) => m_score.coins += amount;
 		public virtual void CollectStar(int index) => m_score.CollectStar(index);
+
+		public virtual void AddApples(int amount) => m_score.apples += amount;
 		public virtual void ConsolidateScore() => m_score.Consolidate();
 
 		public virtual void Pause(bool value) => m_pauser.Pause(value);
