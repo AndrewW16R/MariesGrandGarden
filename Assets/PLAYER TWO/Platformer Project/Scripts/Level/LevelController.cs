@@ -49,6 +49,11 @@ namespace PLAYERTWO.PlatformerProject
 				m_score.watermelonsCollected = true;
 				Debug.Log(m_score.watermelonsCollected);
 			}
+
+			if (m_score.applesCollected == true && m_score.lemonsCollected == true && m_score.watermelonsCollected == true)
+            {
+				m_finisher.Finish();
+            }
 		}
 	}
 }

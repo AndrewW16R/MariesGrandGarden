@@ -74,7 +74,7 @@ namespace PLAYERTWO.PlatformerProject
 			set
 			{
 				m_lemons = value;
-				OnApplesSet?.Invoke(m_lemons);
+				OnLemonsSet?.Invoke(m_lemons);
 			}
 		}
 
@@ -85,7 +85,7 @@ namespace PLAYERTWO.PlatformerProject
 			set
 			{
 				m_watermelons = value;
-				OnApplesSet?.Invoke(m_watermelons);
+				OnWatermelonsSet?.Invoke(m_watermelons);
 			}
 		}
 
