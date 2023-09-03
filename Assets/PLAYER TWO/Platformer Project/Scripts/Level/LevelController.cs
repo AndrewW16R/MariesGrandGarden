@@ -20,6 +20,10 @@ namespace PLAYERTWO.PlatformerProject
 		public virtual void CollectStar(int index) => m_score.CollectStar(index);
 
 		public virtual void AddApples(int amount) => m_score.apples += amount;
+
+		public virtual void AddLemons(int amount) => m_score.lemons += amount;
+
+		public virtual void AddWatermelons(int amount) => m_score.watermelons += amount;
 		public virtual void ConsolidateScore() => m_score.Consolidate();
 
 		public virtual void Pause(bool value) => m_pauser.Pause(value);
@@ -32,6 +36,18 @@ namespace PLAYERTWO.PlatformerProject
 			{
 				m_score.applesCollected = true;
 				Debug.Log(m_score.applesCollected);
+			}
+
+			if (m_score.m_lemons == m_score.totalLemonsInLevel)
+			{
+				m_score.lemonsCollected = true;
+				Debug.Log(m_score.lemonsCollected);
+			}
+
+			if (m_score.m_watermelons == m_score.totalWatermelonsInLevel)
+			{
+				m_score.watermelonsCollected = true;
+				Debug.Log(m_score.watermelonsCollected);
 			}
 		}
 	}

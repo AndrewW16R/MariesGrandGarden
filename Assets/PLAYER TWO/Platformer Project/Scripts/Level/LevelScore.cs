@@ -13,6 +13,10 @@ namespace PLAYERTWO.PlatformerProject
 
 		public UnityEvent<int> OnApplesSet;
 
+		public UnityEvent<int> OnLemonsSet;
+
+		public UnityEvent<int> OnWatermelonsSet;
+
 		/// <summary>
 		/// Called when the collected stars array have changed.
 		/// </summary>
@@ -34,8 +38,14 @@ namespace PLAYERTWO.PlatformerProject
         public bool applesCollected = false;
 		public int totalApplesInLevel;
 
-		
-        public int coins
+		public bool lemonsCollected = false;
+		public int totalLemonsInLevel;
+
+		public bool watermelonsCollected = false;
+		public int totalWatermelonsInLevel;
+
+
+		public int coins
 		{
 			get { return m_coins; }
 
@@ -54,6 +64,28 @@ namespace PLAYERTWO.PlatformerProject
 			{
 				m_apples = value;
 				OnApplesSet?.Invoke(m_apples);
+			}
+		}
+
+		public int lemons
+		{
+			get { return m_lemons; }
+
+			set
+			{
+				m_lemons = value;
+				OnApplesSet?.Invoke(m_lemons);
+			}
+		}
+
+		public int watermelons
+		{
+			get { return m_watermelons; }
+
+			set
+			{
+				m_watermelons = value;
+				OnApplesSet?.Invoke(m_watermelons);
 			}
 		}
 
@@ -76,6 +108,8 @@ namespace PLAYERTWO.PlatformerProject
 		protected bool[] m_stars = new bool[GameLevel.StarsPerLevel];
 
 		public int m_apples;
+		public int m_lemons;
+		public int m_watermelons;
 
 		protected Game m_game;
 		protected GameLevel m_level;

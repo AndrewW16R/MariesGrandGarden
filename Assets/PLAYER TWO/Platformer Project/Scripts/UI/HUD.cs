@@ -11,14 +11,22 @@ namespace PLAYERTWO.PlatformerProject
 		public string healthFormat = "0";
         public string applesFormat = "0";
 		public string totalApplesFormat = "/3";
+		public string lemonsFormat = "0";
+		public string totalLemonsFormat = "/2";
+		public string watermelonsFormat = "0";
+		public string totalWatermelonsFormat = "/1";
 
-        [Header("UI Elements")]
+		[Header("UI Elements")]
 		public Text retries;
 		public Text coins;
 		public Text health;
 		public Text timer;
 		public Text apples;
 		public Text totalApples;
+		public Text lemons;
+		public Text totalLemons;
+		public Text watermelons;
+		public Text totalWatermelons;
 		public Image[] starsImages;
 
 		protected Game m_game;
@@ -51,6 +59,32 @@ namespace PLAYERTWO.PlatformerProject
 				totalApples.color = Color.green;
             }
         }
+
+		protected virtual void UpdateLemons(int value)
+		{
+			lemons.text = value.ToString(lemonsFormat);
+
+			Debug.Log("Test");
+			if (m_score.lemons == m_score.totalLemonsInLevel)
+			{
+				Debug.Log("HUD TEST");
+				lemons.color = Color.green;
+				totalLemons.color = Color.green;
+			}
+		}
+
+		protected virtual void UpdateWatermelons(int value)
+		{
+			watermelons.text = value.ToString(watermelonsFormat);
+
+			Debug.Log("Test");
+			if (m_score.watermelons == m_score.totalWatermelonsInLevel)
+			{
+				Debug.Log("HUD TEST");
+				watermelons.color = Color.green;
+				totalWatermelons.color = Color.green;
+			}
+		}
 
 		/// <summary>
 		/// Set the retries counter to a given value.
@@ -104,7 +138,9 @@ namespace PLAYERTWO.PlatformerProject
 			UpdateHealth();
             UpdateStars(m_score.stars);
 			UpdateApples(m_score.apples);
-        }
+			UpdateLemons(m_score.lemons);
+			UpdateWatermelons(m_score.watermelons);
+		}
 
         protected virtual void Awake()
 		{
@@ -119,6 +155,8 @@ namespace PLAYERTWO.PlatformerProject
 				m_game.OnRetriesSet.AddListener(UpdateRetries);
 				m_player.health.onChange.AddListener(UpdateHealth);
 				m_score.OnApplesSet.AddListener(UpdateApples);
+				m_score.OnLemonsSet.AddListener(UpdateLemons);
+				m_score.OnWatermelonsSet.AddListener(UpdateWatermelons);
 				Refresh();
 			});
 		}

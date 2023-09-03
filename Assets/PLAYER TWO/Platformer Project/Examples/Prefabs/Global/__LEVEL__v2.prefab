@@ -309,6 +309,12 @@ MonoBehaviour:
   OnApplesSet:
     m_PersistentCalls:
       m_Calls: []
+  OnLemonsSet:
+    m_PersistentCalls:
+      m_Calls: []
+  OnWatermelonsSet:
+    m_PersistentCalls:
+      m_Calls: []
   OnStarsSet:
     m_PersistentCalls:
       m_Calls: []
@@ -317,7 +323,13 @@ MonoBehaviour:
       m_Calls: []
   applesCollected: 0
   totalApplesInLevel: 3
+  lemonsCollected: 0
+  totalLemonsInLevel: 2
+  watermelonsCollected: 0
+  totalWatermelonsInLevel: 1
   m_apples: 0
+  m_lemons: 0
+  m_watermelons: 0
 --- !u!114 &2610814200213463532
 MonoBehaviour:
   m_ObjectHideFlags: 0
