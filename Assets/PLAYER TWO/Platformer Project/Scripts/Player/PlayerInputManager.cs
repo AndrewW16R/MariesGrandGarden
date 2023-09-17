@@ -18,7 +18,7 @@ namespace PLAYERTWO.PlatformerProject
 		protected InputAction m_airDive;
 		protected InputAction m_stomp;
 		protected InputAction m_releaseLedge;
-		protected InputAction m_pause;
+		public InputAction m_pause;
 		protected InputAction m_look;
 		protected InputAction m_glide;
 		protected InputAction m_dash;

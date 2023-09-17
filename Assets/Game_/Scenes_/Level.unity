@@ -815,6 +815,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1906510930695061036, guid: 9d45361bdd6842f4fac85115097a8b3a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1294434831}
+    - target: {fileID: 1906510930695061036, guid: 9d45361bdd6842f4fac85115097a8b3a,
+        type: 3}
+      propertyPath: cutsceneCamera
+      value: 
+      objectReference: {fileID: 1206617999}
+    - target: {fileID: 1906510930695061036, guid: 9d45361bdd6842f4fac85115097a8b3a,
+        type: 3}
+      propertyPath: cutsceneLength
+      value: 290
+      objectReference: {fileID: 0}
+    - target: {fileID: 1906510930695061036, guid: 9d45361bdd6842f4fac85115097a8b3a,
+        type: 3}
+      propertyPath: cutsceneManager
+      value: 
+      objectReference: {fileID: 1206617999}
     - target: {fileID: 2599606500051996136, guid: 9d45361bdd6842f4fac85115097a8b3a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4095,7 +4115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1206618000
 Animator:
   serializedVersion: 5
@@ -5051,6 +5071,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650432633027884452, guid: eb0f77ac3ce65a04db54ff55e59b0815,
+        type: 3}
+      propertyPath: m_pause.m_Id
+      value: ca6119fe-73e8-4a50-9653-e67b33521c00
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650432633027884452, guid: eb0f77ac3ce65a04db54ff55e59b0815,
+        type: 3}
+      propertyPath: m_pause.m_Name
+      value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 6650432633027884458, guid: eb0f77ac3ce65a04db54ff55e59b0815,
         type: 3}
