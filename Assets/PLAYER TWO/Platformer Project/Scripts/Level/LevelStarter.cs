@@ -74,7 +74,10 @@ namespace PLAYERTWO.PlatformerProject
 			}
 			else
             {
+				cutsceneCamera.SetActive(false);
 				m_pauser.canPause = true;
+				m_level.player.controller.enabled = true;
+				cutscenePlaying = false;
 			}
         }
     }
