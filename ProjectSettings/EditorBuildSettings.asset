@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PLAYER TWO/Platformer Project/Examples/Scenes/TestLevelScene.unity
     guid: 278a551158294f341b62da4310b65882
+  - enabled: 1
+    path: Assets/Game_/Scenes_/Level.unity
+    guid: 5642c038328ac394ba9793493625bfe6
   m_configObjects: {}

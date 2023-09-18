@@ -415,6 +415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FountainTop
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4140251cb8adb8a4d92da780db81711c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4140251cb8adb8a4d92da780db81711c, type: 3}
 --- !u!4 &153057881463687892 stripped
@@ -524,6 +529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FountainSupport
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e23faee6f4fba384bb00d38685f13b9e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e23faee6f4fba384bb00d38685f13b9e, type: 3}
@@ -904,6 +914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FountainBase
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0acdd133b6ec8254a8c6f2cb2c30cf14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0acdd133b6ec8254a8c6f2cb2c30cf14, type: 3}
