@@ -13,7 +13,8 @@ namespace PLAYERTWO.PlatformerProject
 		public float ghostingDuration = 0.5f;
 		public GameObject display;
 		public AudioClip clip;
-		public ParticleSystem particle;
+        public ParticleSystem particle;
+		public ParticleSystem idleParticle;
 
 		[Header("Visibility Settings")]
 		public bool hidden;
@@ -57,6 +58,11 @@ namespace PLAYERTWO.PlatformerProject
 		protected const int k_horizontalMinRotation = 0;
 		protected const int k_horizontalMaxRotation = 360;
 
+		public void awake()
+        {
+			//idleParticle = GetComponent<ParticleSystem>();
+		}
+
 		protected virtual void InitializeAudio()
 		{
 			if (!TryGetComponent(out m_audio))
@@ -80,6 +86,10 @@ namespace PLAYERTWO.PlatformerProject
 		protected virtual void InitializeDisplay()
 		{
 			display.SetActive(!hidden);
+			if (idleParticle != null)
+			{
+				idleParticle.Play();
+			}
 		}
 
 		protected virtual void InitializeVelocity()
@@ -170,6 +180,10 @@ namespace PLAYERTWO.PlatformerProject
 				m_elapsedLifeTime = 0;
 				display.SetActive(false);
 				m_collider.enabled = false;
+				if (idleParticle != null)
+                {
+					idleParticle.Stop();
+				}
 			}
 		}
 

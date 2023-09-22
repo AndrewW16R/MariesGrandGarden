@@ -9,6 +9,7 @@ namespace PLAYERTWO.PlatformerProject
 	{
 		public Transform respawn;
 		public AudioClip clip;
+		public ParticleSystem particle;
 
 		/// <summary>
 		/// Invoked when the Checkpoint is activated.
@@ -35,6 +36,11 @@ namespace PLAYERTWO.PlatformerProject
 				m_audio.PlayOneShot(clip);
 				player.SetRespawn(respawn.position, respawn.rotation);
 				OnActivate?.Invoke();
+				if (particle != null)
+				{
+					particle.Play();
+				}
+
 			}
 		}
 
@@ -58,6 +64,7 @@ namespace PLAYERTWO.PlatformerProject
 
 			m_collider = GetComponent<Collider>();
 			m_collider.isTrigger = true;
+
 		}
 	}
 }
