@@ -21,6 +21,7 @@ namespace PLAYERTWO.PlatformerProject
 		public string nextScene;
 		public string exitScene;
 		public float loadingDelay = 1f;
+		public GameObject clearedTexted;
 
 		protected Game m_game => Game.instance;
 		protected Level m_level => Level.instance;
@@ -29,13 +30,26 @@ namespace PLAYERTWO.PlatformerProject
 		protected GameLoader m_loader => GameLoader.instance;
 		protected Fader m_fader => Fader.instance;
 
+        public void Awake()
+        {
+            if (clearedTexted != null)
+            {
+				clearedTexted.SetActive(false);
+            }
+        }
 
-		protected virtual IEnumerator FinishRoutine()
+
+        protected virtual IEnumerator FinishRoutine()
 		{
 			m_pauser.Pause(false);
 			m_pauser.canPause = false;
 			m_score.stopTime = true;
 			m_level.player.inputs.enabled = false;
+
+			if (clearedTexted != null)
+			{
+				clearedTexted.SetActive(true);
+			}
 
 			yield return new WaitForSeconds(loadingDelay);
 
