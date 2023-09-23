@@ -29,6 +29,11 @@ namespace PLAYERTWO.PlatformerProject
 		public Text totalWatermelons;
 		public Image[] starsImages;
 
+        public GameObject health3Icon;
+        public GameObject health2Icon;
+        public GameObject health1Icon;
+		public GameObject health0Icon;
+
 		protected Game m_game;
 		protected LevelScore m_score;
 		protected Player m_player;
@@ -100,6 +105,34 @@ namespace PLAYERTWO.PlatformerProject
 		protected virtual void UpdateHealth()
 		{
 			health.text = m_player.health.current.ToString(healthFormat);
+			if (m_player.health.current >= 3)
+			{
+				health3Icon.SetActive(true);
+                health2Icon.SetActive(false);
+				health1Icon.SetActive(false);
+				health0Icon.SetActive(false);
+			}
+			else if (m_player.health.current == 2)
+			{
+				health3Icon.SetActive(false);
+				health2Icon.SetActive(true);
+				health1Icon.SetActive(false);
+				health0Icon.SetActive(false);
+			}
+			else if (m_player.health.current == 1)
+			{
+				health3Icon.SetActive(false);
+				health2Icon.SetActive(false);
+				health1Icon.SetActive(true);
+				health0Icon.SetActive(false);
+			}
+			else
+			{
+				health3Icon.SetActive(false);
+				health2Icon.SetActive(false);
+				health1Icon.SetActive(false);
+				health0Icon.SetActive(true);
+			}
 		}
 
 		/// <summary>
