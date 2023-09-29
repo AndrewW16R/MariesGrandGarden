@@ -43,6 +43,7 @@ namespace PLAYERTWO.PlatformerProject
 
 		protected virtual void Start()
 		{
+			m_score.stopTime = true;
 			StartCoroutine(Routine());
 			//changes made to be able to skip cutscene are below this line
 			timePassed = 0;
@@ -50,6 +51,7 @@ namespace PLAYERTWO.PlatformerProject
 			cutscenePlaying = true;
 			m_inputManager = player.GetComponent<PlayerInputManager>();
 			
+
 		}
 
         public void FixedUpdate()
@@ -64,12 +66,14 @@ namespace PLAYERTWO.PlatformerProject
 				timePassed += 1;
 				m_pauser.canPause = false;
 				m_level.player.controller.enabled = false;
+				m_score.stopTime = true;
 				if (m_inputManager.m_pause.IsPressed())
                 {
 					cutsceneCamera.SetActive(false);
 					m_pauser.canPause = true;
 					m_level.player.controller.enabled = true;
 					cutscenePlaying = false;
+					m_score.stopTime = false;
 				}
 			}
 			else
@@ -78,6 +82,7 @@ namespace PLAYERTWO.PlatformerProject
 				m_pauser.canPause = true;
 				m_level.player.controller.enabled = true;
 				cutscenePlaying = false;
+				m_score.stopTime = false;
 			}
         }
     }

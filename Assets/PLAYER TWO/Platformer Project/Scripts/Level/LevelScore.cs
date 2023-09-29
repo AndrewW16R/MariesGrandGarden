@@ -160,6 +160,7 @@ namespace PLAYERTWO.PlatformerProject
 			}
 		}
 
+	
 		protected virtual void Start()
 		{
 			m_game = Game.instance;
@@ -171,6 +172,7 @@ namespace PLAYERTWO.PlatformerProject
 			}
 
 			OnScoreLoaded?.Invoke();
+
 		}
 
 		protected virtual void Update()
