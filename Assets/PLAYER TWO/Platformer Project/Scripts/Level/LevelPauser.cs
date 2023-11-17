@@ -51,6 +51,7 @@ namespace PLAYERTWO.PlatformerProject
 				else
 				{
 					Game.LockCursor();
+					Cursor.visible = false;
 					paused = false;
 					Time.timeScale = 1;
 					pauseScreen?.Hide();

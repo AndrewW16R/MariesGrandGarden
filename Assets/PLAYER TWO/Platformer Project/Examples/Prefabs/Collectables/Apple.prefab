@@ -4874,7 +4874,7 @@ MonoBehaviour:
   times: 1
   ghostingDuration: 0.5
   display: {fileID: 2924581936825507604}
-  clip: {fileID: 8300000, guid: 1170fdadbd6bf0b46b820aae14f65e17, type: 3}
+  clip: {fileID: 8300000, guid: 61bdabf7d47266c488b14a91d3a202b4, type: 3}
   particle: {fileID: 6940178250071472060}
   idleParticle: {fileID: 6250045147588395798}
   hidden: 0

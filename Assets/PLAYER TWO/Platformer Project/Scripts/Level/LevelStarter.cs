@@ -20,6 +20,7 @@ namespace PLAYERTWO.PlatformerProject
 		public GameObject cutsceneCamera;
 		public GameObject player;
 		public PlayerInputManager m_inputManager;
+		public GameObject skipIntroPrompt;
 
 		protected Level m_level => Level.instance;
 		protected LevelScore m_score => LevelScore.instance;
@@ -31,6 +32,7 @@ namespace PLAYERTWO.PlatformerProject
 		protected virtual IEnumerator Routine()
 		{
 			Game.LockCursor();
+			Cursor.visible = false;
 			m_level.player.controller.enabled = false;
 			m_level.player.inputs.enabled = false;
 			yield return new WaitForSeconds(enablePlayerDelay);
@@ -67,6 +69,7 @@ namespace PLAYERTWO.PlatformerProject
 				m_pauser.canPause = false;
 				m_level.player.controller.enabled = false;
 				m_score.stopTime = true;
+				skipIntroPrompt.SetActive(true);
 				if (m_inputManager.m_pause.IsPressed())
                 {
 					cutsceneCamera.SetActive(false);
@@ -74,6 +77,7 @@ namespace PLAYERTWO.PlatformerProject
 					m_level.player.controller.enabled = true;
 					cutscenePlaying = false;
 					m_score.stopTime = false;
+					skipIntroPrompt.SetActive(false);
 				}
 			}
 			else if (timePassed >= cutsceneLength && cutscenePlaying == true)
@@ -83,6 +87,7 @@ namespace PLAYERTWO.PlatformerProject
 				m_level.player.controller.enabled = true;
 				cutscenePlaying = false;
 				m_score.stopTime = false;
+				skipIntroPrompt.SetActive(false);
 			}
         }
     }
