@@ -17,8 +17,10 @@ namespace PLAYERTWO.PlatformerProject
 		public Canvas canvas;
 		public Text uiText;
 		public float scaleDuration = 0.25f;
+        public GameObject targetPlayer;
+		public bool billBoardCanvas;
 
-		[Space(15)]
+        [Space(15)]
 		public UnityEvent onShow;
 		public UnityEvent onHide;
 
@@ -92,6 +94,11 @@ namespace PLAYERTWO.PlatformerProject
 				var allowedHeight = other.transform.position.y > m_collider.bounds.min.y;
 				var inCameraSight = Vector3.Dot(m_camera.transform.forward, transform.forward) < 0;
 
+				if (billBoardCanvas == true)
+				{
+					OrientCanvas();
+				}
+
 				if (angle < viewAngle && allowedHeight && inCameraSight)
 				{
 					Show();
@@ -102,5 +109,11 @@ namespace PLAYERTWO.PlatformerProject
 				}
 			}
 		}
+
+		public void OrientCanvas()
+        {
+			Vector3 targetPosition = new Vector3(targetPlayer.transform.position.x, canvas.transform.position.y, targetPlayer.transform.position.z);
+			canvas.transform.LookAt(targetPosition);
+        }
 	}
 }

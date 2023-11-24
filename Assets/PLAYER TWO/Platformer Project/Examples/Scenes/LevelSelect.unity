@@ -962,7 +962,7 @@ PrefabInstance:
         type: 3}
       propertyPath: levels.Array.data[0].image
       value: 
-      objectReference: {fileID: 21300000, guid: 8923c795c38f7e3498712a2e6fae3e23,
+      objectReference: {fileID: 21300000, guid: 498f74a6de566f34daa91521a5b08687,
         type: 3}
     - target: {fileID: 539602378330051258, guid: d6e66bcd3d2123049855d2670ef53005,
         type: 3}

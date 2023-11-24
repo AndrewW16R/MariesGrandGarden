@@ -7,6 +7,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7592033164691336423}
     m_Modifications:
+    - target: {fileID: 16929951575569012, guid: 0cead871013fe284fbb09991a0e29082,
+        type: 3}
+      propertyPath: bounciness
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 16929951575569012, guid: 0cead871013fe284fbb09991a0e29082,
+        type: 3}
+      propertyPath: initialVelocity.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 16929951575569012, guid: 0cead871013fe284fbb09991a0e29082,
+        type: 3}
+      propertyPath: maxBounceYVelocity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 16929951575569012, guid: 0cead871013fe284fbb09991a0e29082,
+        type: 3}
+      propertyPath: minForceToStopPhysics
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 16929951575569014, guid: 0cead871013fe284fbb09991a0e29082,
         type: 3}
       propertyPath: m_Name
@@ -239,15 +259,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e33fbe10d53a343aabf9ae5aff9f15, type: 3}
---- !u!4 &7592033164691336423 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4151346648260422250, guid: e5e33fbe10d53a343aabf9ae5aff9f15,
-    type: 3}
-  m_PrefabInstance: {fileID: 5818890653781411469}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &6673013470737319434 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 890468481807057031, guid: e5e33fbe10d53a343aabf9ae5aff9f15,
+    type: 3}
+  m_PrefabInstance: {fileID: 5818890653781411469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7592033164691336423 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4151346648260422250, guid: e5e33fbe10d53a343aabf9ae5aff9f15,
     type: 3}
   m_PrefabInstance: {fileID: 5818890653781411469}
   m_PrefabAsset: {fileID: 0}
