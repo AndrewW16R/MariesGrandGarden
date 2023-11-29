@@ -59,7 +59,7 @@ MonoBehaviour:
     scene: Level
     name: Marie's Garden
     description: Find all of the fruit in the garden!
-    image: {fileID: 21300000, guid: 8923c795c38f7e3498712a2e6fae3e23, type: 3}
+    image: {fileID: 21300000, guid: 498f74a6de566f34daa91521a5b08687, type: 3}
 --- !u!114 &2298921648025393660
 MonoBehaviour:
   m_ObjectHideFlags: 0

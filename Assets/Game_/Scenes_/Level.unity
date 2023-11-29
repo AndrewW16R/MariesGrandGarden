@@ -1113,6 +1113,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &71427714 stripped
@@ -1480,6 +1485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankV1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
@@ -1932,6 +1942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankV1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
@@ -5672,6 +5687,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgeBorderV2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 853c1130ab5225442a6c8b9a17dc608a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 853c1130ab5225442a6c8b9a17dc608a, type: 3}
 --- !u!1 &242857938 stripped
@@ -9135,6 +9155,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hedge (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 833ddbff1da45514bb91ada4fa2643a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 833ddbff1da45514bb91ada4fa2643a5, type: 3}
 --- !u!4 &390904909 stripped
@@ -11506,6 +11531,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &538098265 stripped
@@ -11734,6 +11764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankV1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
@@ -15264,6 +15299,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &720300272 stripped
@@ -16055,6 +16095,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 752986360}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &745379863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745379857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185dedbb8e0bcba40adeffeeabb6b7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1294434844}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 65536
 --- !u!1 &745871076
 GameObject:
   m_ObjectHideFlags: 0
@@ -24781,6 +24837,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!1 &1151651733 stripped
@@ -25337,6 +25398,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &1168516253 stripped
@@ -25819,6 +25885,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &1183688093 stripped
@@ -25949,6 +26020,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankV1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
@@ -26335,6 +26411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankV1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
@@ -27839,6 +27920,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &1278374629 stripped
@@ -28534,6 +28620,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.000000923872
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069831147500522859, guid: eb0f77ac3ce65a04db54ff55e59b0815,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5069831147500522859, guid: eb0f77ac3ce65a04db54ff55e59b0815,
         type: 3}
@@ -32326,6 +32417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankV1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
@@ -37540,6 +37636,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &1692715253 stripped
@@ -39052,6 +39153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankV1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
@@ -41006,6 +41112,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &1818906388 stripped
@@ -41713,6 +41824,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &1889238542 stripped
@@ -42325,6 +42441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankV1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
@@ -43728,6 +43849,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankV1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
 --- !u!4 &2029995175 stripped
@@ -45062,6 +45188,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankV1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6afbcde725e3674093a7e38300d9386,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6afbcde725e3674093a7e38300d9386, type: 3}
