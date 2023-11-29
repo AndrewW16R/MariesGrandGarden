@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace PLAYERTWO.PlatformerProject
 {
@@ -18,6 +19,9 @@ namespace PLAYERTWO.PlatformerProject
 		/// </summary>
 		public UnityEvent OnGameOver;
 
+		public GameObject gameoverText;
+		public string exitScene;
+
 		public float respawnFadeOutDelay = 1f;
 		public float respawnFadeInDelay = 0.5f;
 		public float gameOverFadeOutDelay = 5f;
@@ -30,6 +34,8 @@ namespace PLAYERTWO.PlatformerProject
 		protected LevelPauser m_pauser => LevelPauser.instance;
 		protected Game m_game => Game.instance;
 		protected Fader m_fader => Fader.instance;
+
+		protected GameLoader m_loader => GameLoader.instance;
 
 		protected virtual IEnumerator RespawnRoutine(bool consumeRetries)
 		{
@@ -55,8 +61,16 @@ namespace PLAYERTWO.PlatformerProject
 		protected virtual IEnumerator GameOverRoutine()
 		{
 			m_score.stopTime = true;
+			gameoverText.SetActive(true);
+			
 			yield return new WaitForSeconds(gameOverFadeOutDelay);
-			GameLoader.instance.Reload();
+			m_fader.FadeOut();
+			//SceneManager.LoadScene("LevelSelect");
+			m_fader.FadeIn();
+			m_loader.Load(exitScene);
+
+			
+
 			OnGameOver?.Invoke();
 		}
 
@@ -117,6 +131,8 @@ namespace PLAYERTWO.PlatformerProject
 		{
 			m_cameras = new List<PlayerCamera>(FindObjectsOfType<PlayerCamera>());
 			m_level.player.playerEvents.OnDie.AddListener(() => Respawn(true));
+
+			gameoverText.SetActive(false);
 		}
 	}
 }

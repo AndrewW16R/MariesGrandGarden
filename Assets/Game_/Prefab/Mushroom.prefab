@@ -162,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 28
   clip: {fileID: 8300000, guid: bd164b0b244d95c4fbf9dc3ad48b67b1, type: 3}
+  bouncefx: {fileID: 0}
 --- !u!1 &6683775411374221358
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 28
   clip: {fileID: 8300000, guid: bd164b0b244d95c4fbf9dc3ad48b67b1, type: 3}
+  bouncefx: {fileID: 0}
 --- !u!1001 &2130997725508412683
 PrefabInstance:
   m_ObjectHideFlags: 0

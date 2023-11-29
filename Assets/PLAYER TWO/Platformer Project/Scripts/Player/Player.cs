@@ -694,5 +694,10 @@ namespace PLAYERTWO.PlatformerProject
 				}
 			}
 		}
+
+		public void FreezePlayer()
+        {
+			Time.timeScale = 0;
+        }
 	}
 }

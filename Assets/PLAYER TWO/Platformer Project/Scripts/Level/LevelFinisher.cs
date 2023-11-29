@@ -30,7 +30,7 @@ namespace PLAYERTWO.PlatformerProject
 		protected GameLoader m_loader => GameLoader.instance;
 		protected Fader m_fader => Fader.instance;
 
-        public void Awake()
+        public void Start()
         {
             if (clearedTexted != null)
             {
@@ -41,6 +41,7 @@ namespace PLAYERTWO.PlatformerProject
 
         protected virtual IEnumerator FinishRoutine()
 		{
+			OnFinish?.Invoke();
 			m_pauser.Pause(false);
 			m_pauser.canPause = false;
 			m_score.stopTime = true;
@@ -61,7 +62,7 @@ namespace PLAYERTWO.PlatformerProject
 			Game.LockCursor(false);
 			m_score.Consolidate();
 			m_loader.Load(nextScene);
-			OnFinish?.Invoke();
+			
 		}
 
 		protected virtual IEnumerator ExitRoutine()

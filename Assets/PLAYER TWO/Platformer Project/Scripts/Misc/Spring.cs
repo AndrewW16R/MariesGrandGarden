@@ -8,6 +8,7 @@ namespace PLAYERTWO.PlatformerProject
 	{
 		public float force = 25f;
 		public AudioClip clip;
+		//public ParticleSystem bouncefx;
 
 		protected AudioSource m_audio;
 		protected Collider m_collider;
@@ -21,6 +22,14 @@ namespace PLAYERTWO.PlatformerProject
 			if (player.verticalVelocity.y <= 0)
 			{
 				m_audio.PlayOneShot(clip);
+
+				/*
+				 * if (bouncefx != null)
+                {
+					bouncefx.Play();
+                }
+				*/
+
 				player.verticalVelocity = Vector3.up * force;
 			}
 		}
