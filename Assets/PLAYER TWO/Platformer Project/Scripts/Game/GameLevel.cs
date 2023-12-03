@@ -31,7 +31,7 @@ namespace PLAYERTWO.PlatformerProject
 		/// <summary>
 		/// The amount of existent stars on each Level.
 		/// </summary>
-		public static readonly int StarsPerLevel = 3;
+		public static readonly int StarsPerLevel = 6;
 
 		/// <summary>
 		/// Loads this Game Level state from a given Game Data.
